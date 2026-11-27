@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeSea Game Studio - Mobile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sea: {
+              deep: '#0B1528',
+              surface: '#11223D',
+              card: '#162C4E',
+              border: '#1F3F6D',
+              primary: '#1B365D',
+              ocean: '#005A9C',
+              cyan: '#60C1E5',
+              ice: '#A0E0EF'
+            }
+          },
+          fontFamily: {
+            heading: ['Sora', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #08101E;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#08101E] text-slate-200 antialiased selection:bg-[#60C1E5] selection:text-[#0B1528] pb-16">
+
+  <!-- 1. NAVBAR MOBILE -->
+  <header class="sticky top-0 z-50 bg-[#0B1528]/95 backdrop-blur-md border-b border-[#1F3F6D]/70 px-4 py-3.5">
+    <div class="flex items-center justify-between">
+      <!-- Logo Left -->
+      <a href="#home" class="flex items-center">
+        <img src="https://lh3.googleusercontent.com/aida/ALJJyrCQHPKAFVXg18K0xH90kV1TrAMRfHk97SfbuP1YhlejvLD4n7ql7YYbj8rWCxUXPRQxQLHTWmQaAGllnCXgfH3VXM8lLhMbbSU6oPhXhv5btDq9xVy77ySRt9ufki7uMRNetn46MWJRP9qdRjgxxuPGXNDVL400ISHKlz75mw78YYM5YvZyKP_N0mtGHzG1PUuYQYl-XmGZU-r46W8YozjpF_Xp_t6T14XtP45NtQQ" alt="MeSea Game Studio" class="h-8 w-auto object-contain">
+      </a>
+      
+      <!-- Login Button & Mobile Menu -->
+      <div class="flex items-center gap-2.5">
+        <a href="#login" class="px-3 py-1.5 rounded-lg text-xs font-bold text-[#0B1528] bg-gradient-to-r from-[#60C1E5] to-[#A0E0EF]">
+          Masuk
+        </a>
+        <button class="p-1.5 rounded-lg bg-[#11223D] border border-[#1F3F6D] text-[#60C1E5]" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Quick Anchor Chips Bar for Mobile Ease -->
+    <div class="flex items-center gap-2 overflow-x-auto pt-2.5 pb-1 text-[11px] no-scrollbar">
+      <a href="#home" class="px-2.5 py-1 rounded-full bg-[#1B365D] text-[#A0E0EF] whitespace-nowrap font-medium">Beranda</a>
+      <a href="#about" class="px-2.5 py-1 rounded-full bg-[#11223D] text-slate-300 hover:text-white whitespace-nowrap">Tentang</a>
+      <a href="#services" class="px-2.5 py-1 rounded-full bg-[#11223D] text-slate-300 hover:text-white whitespace-nowrap">Layanan</a>
+      <a href="#news" class="px-2.5 py-1 rounded-full bg-[#11223D] text-slate-300 hover:text-white whitespace-nowrap">Berita</a>
+      <a href="#contact" class="px-2.5 py-1 rounded-full bg-[#11223D] text-slate-300 hover:text-white whitespace-nowrap">Kontak</a>
+    </div>
+  </header>
+
+  <!-- 2. HERO MOBILE -->
+  <section id="home" class="px-4 pt-6 pb-12 border-b border-[#1F3F6D]/40">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#11223D] border border-[#60C1E5]/40 text-[#A0E0EF] text-[10px] font-semibold uppercase tracking-wider mb-4">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#60C1E5] animate-ping"></span>
+      Studio Game Terdepan Indonesia
+    </div>
+
+    <h1 class="font-heading text-2xl font-extrabold text-white leading-tight">
+      Menciptakan Dunia Game Epik dari <span class="text-[#60C1E5]">Kedalaman Samudra</span>
+    </h1>
+
+    <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+      MeSea Studio memadukan visual kelas dunia, narasi mitologi maritim nusantara, dan teknologi gameplay mutakhir untuk gamer global.
+    </p>
+
+    <!-- CTAs Mobile -->
+    <div class="mt-5 flex flex-col gap-2.5">
+      <a href="#services" class="w-full py-3 rounded-xl font-bold text-xs bg-gradient-to-r from-[#005A9C] to-[#1B365D] text-white text-center border border-[#60C1E5]/60 shadow-md">
+        Jelajahi Karya Kami
+      </a>
+      <a href="#about" class="w-full py-3 rounded-xl font-semibold text-xs bg-[#11223D] text-[#E0F2FE] text-center border border-[#1F3F6D]">
+        Pelajari Profil Kami
+      </a>
+    </div>
+
+    <!-- Hero Image Card Mobile -->
+    <div class="mt-6 rounded-xl overflow-hidden border border-[#60C1E5]/40 shadow-xl bg-[#0B1528] p-1">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiZCCmGfI_F0nYVJVrU95RoZmNlOx1M0oAktunYerJRBy7lm1aObpiCSosK0Q-9XnrE7NkGn7q-NoF2ICdkCt_cw2MD9o5bIXMb9dSLuVGhleIqvjJbtBwb_icwCrobfMWkxsVMp8kkI9FaX0GhQcZdWVi675qJyIKVclTmR5zskcdSKDincafFRwM1WeBUC8pz05G1dGviFLIsu50-fKKyHyQqk77IDEOXhhaDkI" alt="Abyssal Odyssey Game Artwork" class="w-full aspect-video object-cover rounded-lg">
+      <div class="p-3 bg-[#0B1528] flex items-center justify-between">
+        <div>
+          <div class="text-[10px] text-[#60C1E5] uppercase font-bold">Game Mendatang</div>
+          <div class="text-xs font-bold text-white">Abyssal Odyssey: Deep Trench</div>
+        </div>
+        <span class="px-2 py-0.5 text-[9px] font-bold bg-[#005A9C] text-[#A0E0EF] rounded">PC & Konsol</span>
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="grid grid-cols-3 gap-2 mt-5 pt-4 border-t border-[#1F3F6D]/50 text-center">
+      <div class="bg-[#11223D] p-2.5 rounded-lg border border-[#1F3F6D]">
+        <div class="text-lg font-bold text-white font-heading">4+</div>
+        <div class="text-[10px] text-slate-400">Game Rilis</div>
+      </div>
+      <div class="bg-[#11223D] p-2.5 rounded-lg border border-[#1F3F6D]">
+        <div class="text-lg font-bold text-[#60C1E5] font-heading">1.8M+</div>
+        <div class="text-[10px] text-slate-400">Pemain</div>
+      </div>
+      <div class="bg-[#11223D] p-2.5 rounded-lg border border-[#1F3F6D]">
+        <div class="text-lg font-bold text-white font-heading">45+</div>
+        <div class="text-[10px] text-slate-400">Talenta</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT MOBILE -->
+  <section id="about" class="px-4 py-12 bg-[#0B1528] border-b border-[#1F3F6D]/40">
+    <span class="text-[10px] font-bold uppercase tracking-widest text-[#60C1E5] bg-[#11223D] px-2.5 py-1 rounded-full border border-[#1F3F6D]">Kisah MeSea Studio</span>
+    <h2 class="font-heading text-xl font-bold text-white mt-2.5">
+      Membangun Mahakarya dengan Semangat Nusantara
+    </h2>
+    <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+      Berdiri sejak 2019 di Jakarta, MeSea menggabungkan visual sinematik dan mitologi kelautan dengan teknologi Unreal Engine 5 untuk audiens dunia.
+    </p>
+
+    <!-- Photo -->
+    <div class="mt-4 rounded-xl overflow-hidden border border-[#1F3F6D]">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCo3ghO9t13SoVx4_PEyYTzSfj98Hq4AirClgU6XqI21-iLv_rBhAhiFJ1q3sGR_IFQ3BGepZS49U_K1JLfL64p2hapnb6xLU2eSRna4xaXZOtU84F-P2I7faVWPvzyY4iWYXv6E-3u2IvETtc2XNhV7FYc3HtbgsMBy4m6CbwkyfSbc2lRC5adtWgC9fuSGXB6BKzrSk2ZP3S-rlK-jJZ7DDhn0vb7E0VivbWB4" alt="Tim MeSea Studio" class="w-full aspect-[4/3] object-cover">
+      <div class="p-2.5 bg-[#11223D] text-[11px] text-slate-300">
+        <strong class="text-white">Studio MeSea Jakarta:</strong> Kolaborasi 45+ kreator game profesional.
+      </div>
+    </div>
+
+    <!-- 3 Strengths -->
+    <div class="mt-5 space-y-3">
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] flex items-start gap-3">
+        <div class="p-2 rounded-lg bg-[#005A9C]/40 text-[#60C1E5]">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold text-white font-heading">Teknologi Mutakhir</h3>
+          <p class="text-[11px] text-slate-300 mt-0.5">Optimasi grafis Unreal Engine 5 & Unity untuk PC dan konsol.</p>
+        </div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] flex items-start gap-3">
+        <div class="p-2 rounded-lg bg-[#005A9C]/40 text-[#60C1E5]">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold text-white font-heading">Art Direction Unik</h3>
+          <p class="text-[11px] text-slate-300 mt-0.5">Estetika bioluminescent laut yang khas dan orisinal.</p>
+        </div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] flex items-start gap-3">
+        <div class="p-2 rounded-lg bg-[#005A9C]/40 text-[#60C1E5]">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold text-white font-heading">Standar Global</h3>
+          <p class="text-[11px] text-slate-300 mt-0.5">Jaringan distribusi terpercaya di Steam, PlayStation, dan Xbox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES MOBILE -->
+  <section id="services" class="px-4 py-12 bg-[#08101E] border-b border-[#1F3F6D]/40">
+    <div class="text-center mb-8">
+      <span class="text-[10px] font-bold uppercase tracking-widest text-[#60C1E5] bg-[#11223D] px-2.5 py-1 rounded-full border border-[#1F3F6D]">Layanan & Jasa</span>
+      <h2 class="font-heading text-xl font-bold text-white mt-2">
+        Solusi Lengkap Industri Game
+      </h2>
+    </div>
+
+    <div class="space-y-3.5">
+      <!-- S1 -->
+      <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D]">
+        <div class="w-8 h-8 rounded-lg bg-[#005A9C] text-[#60C1E5] flex items-center justify-center mb-2.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2z"/></svg>
+        </div>
+        <h3 class="font-heading text-sm font-bold text-white">Full-Cycle Game Development</h3>
+        <p class="text-slate-300 text-xs mt-1">Pembuatan game lengkap dari pra-produksi hingga peluncuran di PC, konsol, & mobile.</p>
+      </div>
+
+      <!-- S2 -->
+      <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D]">
+        <div class="w-8 h-8 rounded-lg bg-[#005A9C] text-[#60C1E5] flex items-center justify-center mb-2.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16"/></svg>
+        </div>
+        <h3 class="font-heading text-sm font-bold text-white">Produksi Aset 2D & 3D Art</h3>
+        <p class="text-slate-300 text-xs mt-1">Concept art, 3D modeling, texturing PBR, rigging, animasi karakter, dan VFX.</p>
+      </div>
+
+      <!-- S3 -->
+      <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D]">
+        <div class="w-8 h-8 rounded-lg bg-[#005A9C] text-[#60C1E5] flex items-center justify-center mb-2.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3"/></svg>
+        </div>
+        <h3 class="font-heading text-sm font-bold text-white">Co-Development & Porting</h3>
+        <p class="text-slate-300 text-xs mt-1">Optimalisasi porting ke PS5, Xbox Series X/S, Nintendo Switch, dan PC.</p>
+      </div>
+
+      <!-- S4 -->
+      <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D]">
+        <div class="w-8 h-8 rounded-lg bg-[#005A9C] text-[#60C1E5] flex items-center justify-center mb-2.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13"/></svg>
+        </div>
+        <h3 class="font-heading text-sm font-bold text-white">Audio & Music Scoring</h3>
+        <p class="text-slate-300 text-xs mt-1">Komposisi audio orkestra sinematik, foley, dan integrasi FMOD/Wwise.</p>
+      </div>
+
+      <!-- S5 -->
+      <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D]">
+        <div class="w-8 h-8 rounded-lg bg-[#005A9C] text-[#60C1E5] flex items-center justify-center mb-2.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="font-heading text-sm font-bold text-white">QA Testing & Kompatibilitas</h3>
+        <p class="text-slate-300 text-xs mt-1">Bug hunting mendalam, uji multiplayer jaringan, dan sertifikasi store resmi.</p>
+      </div>
+
+      <!-- S6 -->
+      <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D]">
+        <div class="w-8 h-8 rounded-lg bg-[#005A9C] text-[#60C1E5] flex items-center justify-center mb-2.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8"/></svg>
+        </div>
+        <h3 class="font-heading text-sm font-bold text-white">Live-Ops & Community Management</h3>
+        <p class="text-slate-300 text-xs mt-1">Update musim berkala, perbaikan patch berkala, dan retensi gamer jangka panjang.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. NEWS MOBILE -->
+  <section id="news" class="px-4 py-12 bg-[#0B1528] border-b border-[#1F3F6D]/40">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#60C1E5] bg-[#11223D] px-2.5 py-1 rounded-full border border-[#1F3F6D]">Kabar Terbaru</span>
+        <h2 class="font-heading text-xl font-bold text-white mt-1.5">Artikel & Rilis</h2>
+      </div>
+      <a href="#news" class="text-xs font-bold text-[#60C1E5]">Lihat Semua</a>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Post 1 -->
+      <article class="rounded-xl overflow-hidden bg-[#11223D] border border-[#1F3F6D]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiZCCmGfI_F0nYVJVrU95RoZmNlOx1M0oAktunYerJRBy7lm1aObpiCSosK0Q-9XnrE7NkGn7q-NoF2ICdkCt_cw2MD9o5bIXMb9dSLuVGhleIqvjJbtBwb_icwCrobfMWkxsVMp8kkI9FaX0GhQcZdWVi675qJyIKVclTmR5zskcdSKDincafFRwM1WeBUC8pz05G1dGviFLIsu50-fKKyHyQqk77IDEOXhhaDkI" alt="Abyssal Odyssey" class="w-full aspect-video object-cover">
+        <div class="p-4">
+          <div class="text-[10px] text-slate-400">24 Mei 2025 • Devlog</div>
+          <h3 class="font-heading text-sm font-bold text-white mt-1">Menguak Misteri "Abyssal Odyssey": Eksplorasi Bawah Laut Generasi Baru</h3>
+          <p class="text-xs text-slate-300 mt-1 line-clamp-2">Trailer resmi perdana menampilkan grafis volumetrik pencahayaan laut dalam.</p>
+          <a href="#read" class="inline-block mt-3 text-xs font-bold text-[#60C1E5]">Baca Selengkapnya &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="rounded-xl overflow-hidden bg-[#11223D] border border-[#1F3F6D]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuByq5rcfmPkuNMSINwSgPyIWNSowEzFDZ91VTscOQqH86yLuLnq0-sAwvrujV0RViDT4mz5-XzcxMRyqbBDBk2pNzBtdbPhc_5BkGiQSh1TfI8soQETyoSRqVDRL-vaCzOyJqb1gRL4nHp7RdIZStamib9H6HDMPPO-pYB8ubU--YV1aZGQ9XHKEKYPSvgTjpoAyxU8zD-tQjUI6x6K-xAnPcCoMfuYLkokfLhNTzU" alt="Cyber Corsairs" class="w-full aspect-video object-cover">
+        <div class="p-4">
+          <div class="text-[10px] text-slate-400">12 Mei 2025 • Patch v2.4</div>
+          <h3 class="font-heading text-sm font-bold text-white mt-1">"Cyber Corsairs: Naval Front" Raih 500.000 Pemain Aktif di Musim 3</h3>
+          <p class="text-xs text-slate-300 mt-1 line-clamp-2">Pembaruan armada kapal tempur baru dan sistem cuaca badai samudera ekstrem.</p>
+          <a href="#read" class="inline-block mt-3 text-xs font-bold text-[#60C1E5]">Baca Selengkapnya &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="rounded-xl overflow-hidden bg-[#11223D] border border-[#1F3F6D]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCo3ghO9t13SoVx4_PEyYTzSfj98Hq4AirClgU6XqI21-iLv_rBhAhiFJ1q3sGR_IFQ3BGepZS49U_K1JLfL64p2hapnb6xLU2eSRna4xaXZOtU84F-P2I7faVWPvzyY4iWYXv6E-3u2IvETtc2XNhV7FYc3HtbgsMBy4m6CbwkyfSbc2lRC5adtWgC9fuSGXB6BKzrSk2ZP3S-rlK-jJZ7DDhn0vb7E0VivbWB4" alt="Karir Studio" class="w-full aspect-video object-cover">
+        <div class="p-4">
+          <div class="text-[10px] text-slate-400">02 Mei 2025 • Karir & Magang</div>
+          <h3 class="font-heading text-sm font-bold text-white mt-1">MeSea Membuka Rekrutmen Senior Gameplay Programmer di Jakarta</h3>
+          <p class="text-xs text-slate-300 mt-1 line-clamp-2">Kami mengundang talenta game developer berbakat Indonesia untuk bergabung.</p>
+          <a href="#read" class="inline-block mt-3 text-xs font-bold text-[#60C1E5]">Baca Selengkapnya &rarr;</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-6">
+      <a href="#all-news" class="block w-full py-3 rounded-xl bg-[#11223D] border border-[#1F3F6D] text-[#60C1E5] text-xs font-bold text-center">
+        Lihat Semua Berita &amp; Devlog
+      </a>
+    </div>
+  </section>
+
+  <!-- 6. CONTACT MOBILE -->
+  <section id="contact" class="px-4 py-12 bg-[#08101E]">
+    <div class="text-center mb-6">
+      <span class="text-[10px] font-bold uppercase tracking-widest text-[#60C1E5] bg-[#11223D] px-2.5 py-1 rounded-full border border-[#1F3F6D]">Hubungi Kami</span>
+      <h2 class="font-heading text-xl font-bold text-white mt-2">Mari Berkolaborasi</h2>
+    </div>
+
+    <!-- Contact Info Cards -->
+    <div class="space-y-2.5 mb-6">
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] text-xs">
+        <div class="text-slate-400 text-[10px] font-bold uppercase">Alamat Kantor</div>
+        <div class="text-white font-medium mt-0.5">Cyber2 Tower Lt. 18, Jl. H. R. Rasuna Said, Kuningan, Jakarta Selatan 12950</div>
+      </div>
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] text-xs">
+        <div class="text-slate-400 text-[10px] font-bold uppercase">Telepon / WhatsApp</div>
+        <div class="text-white font-medium mt-0.5">+62 (21) 5890-4421 | +62 812-9988-3320 (WA)</div>
+      </div>
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] text-xs">
+        <div class="text-slate-400 text-[10px] font-bold uppercase">Email Resmi</div>
+        <div class="text-[#60C1E5] font-medium mt-0.5">business@meseastudio.com</div>
+      </div>
+      <div class="p-3.5 rounded-xl bg-[#11223D] border border-[#1F3F6D] text-xs">
+        <div class="text-slate-400 text-[10px] font-bold uppercase">Jam Operasional</div>
+        <div class="text-white font-medium mt-0.5">Senin – Jumat, 09:00 – 18:00 WIB</div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="p-4 rounded-xl bg-[#11223D] border border-[#1F3F6D] mb-6">
+      <h3 class="font-heading text-sm font-bold text-white mb-3">Kirim Pesan Cepat</h3>
+      <form class="space-y-3 text-xs">
+        <input type="text" placeholder="Nama Lengkap *" class="w-full px-3 py-2 rounded-lg bg-[#0B1528] border border-[#1F3F6D] text-white">
+        <input type="email" placeholder="Alamat Email *" class="w-full px-3 py-2 rounded-lg bg-[#0B1528] border border-[#1F3F6D] text-white">
+        <input type="tel" placeholder="Nomor WhatsApp" class="w-full px-3 py-2 rounded-lg bg-[#0B1528] border border-[#1F3F6D] text-white">
+        <select class="w-full px-3 py-2 rounded-lg bg-[#0B1528] border border-[#1F3F6D] text-white">
+          <option>Publishing & Kerja Sama Game</option>
+          <option>Full-Cycle Game Development</option>
+          <option>Outsourcing 3D Art</option>
+          <option>Karir & Magang</option>
+        </select>
+        <textarea rows="3" placeholder="Pesan Anda..." class="w-full px-3 py-2 rounded-lg bg-[#0B1528] border border-[#1F3F6D] text-white resize-none"></textarea>
+        <button type="button" class="w-full py-3 rounded-lg font-bold bg-[#60C1E5] text-[#0B1528]">Kirim Pesan</button>
+      </form>
+    </div>
+
+    <!-- Google Maps Area Placeholder Mobile -->
+    <div class="rounded-xl overflow-hidden border border-[#1F3F6D] bg-[#11223D]">
+      <div class="p-2.5 bg-[#0B1528] border-b border-[#1F3F6D] text-[11px] text-slate-300 flex items-center justify-between">
+        <span>📍 Peta Studio MeSea</span>
+        <span class="text-[#60C1E5] font-bold">Cyber2 Tower</span>
+      </div>
+      <div class="h-56 bg-[#0D1B2E] relative flex items-center justify-center p-4">
+        <!-- SVG Map Background -->
+        <svg class="absolute inset-0 w-full h-full opacity-35" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="mobGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+              <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1F3F6D" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#mobGrid)" />
+          <path d="M-10,80 Q100,50 300,180" stroke="#005A9C" stroke-width="6" fill="none" opacity="0.6"/>
+        </svg>
+
+        <div class="relative z-10 text-center">
+          <div class="w-10 h-10 mx-auto rounded-full bg-[#005A9C] border-2 border-[#60C1E5] flex items-center justify-center text-white mb-2 shadow-lg">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </div>
+          <div class="text-xs font-bold text-white">MeSea Game Studio</div>
+          <div class="text-[10px] text-[#A0E0EF]">Kuningan, Jakarta Selatan</div>
+          <a href="https://maps.google.com" target="_blank" class="mt-2 inline-block px-3 py-1 rounded bg-[#005A9C] text-white text-[10px] font-bold">
+            Buka di Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FOOTER MOBILE -->
+  <footer class="bg-[#050B14] border-t border-[#1F3F6D] px-4 pt-10 pb-6 text-slate-400 text-xs">
+    <div class="mb-5">
+      <img src="https://lh3.googleusercontent.com/aida/ALJJyrCQHPKAFVXg18K0xH90kV1TrAMRfHk97SfbuP1YhlejvLD4n7ql7YYbj8rWCxUXPRQxQLHTWmQaAGllnCXgfH3VXM8lLhMbbSU6oPhXhv5btDq9xVy77ySRt9ufki7uMRNetn46MWJRP9qdRjgxxuPGXNDVL400ISHKlz75mw78YYM5YvZyKP_N0mtGHzG1PUuYQYl-XmGZU-r46W8YozjpF_Xp_t6T14XtP45NtQQ" alt="MeSea" class="h-7 w-auto object-contain mb-3">
+      <p class="text-slate-400 text-[11px] leading-relaxed">
+        Studio game terkemuka di Indonesia yang mendedikasikan diri untuk merancang karya hiburan interaktif berstandar global.
+      </p>
+    </div>
+
+    <!-- Social links -->
+    <div class="flex items-center gap-3 mb-6">
+      <span class="text-[11px] text-slate-300 font-semibold">Komunitas:</span>
+      <a href="#discord" class="px-2.5 py-1 rounded bg-[#11223D] border border-[#1F3F6D] text-[#60C1E5] text-[11px]">Discord</a>
+      <a href="#steam" class="px-2.5 py-1 rounded bg-[#11223D] border border-[#1F3F6D] text-[#60C1E5] text-[11px]">Steam</a>
+      <a href="#youtube" class="px-2.5 py-1 rounded bg-[#11223D] border border-[#1F3F6D] text-[#60C1E5] text-[11px]">YouTube</a>
+    </div>
+
+    <div class="pt-4 border-t border-[#1F3F6D]/50 text-[10px] text-slate-500 space-y-2">
+      <div>&copy; 2025 PT MeSea Studio Nusantara. All rights reserved.</div>
+      <div class="flex gap-4 text-slate-400">
+        <a href="#privacy">Privasi</a>
+        <a href="#terms">Syarat</a>
+        <a href="#contact">Bantuan</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

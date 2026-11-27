@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: 'Sora', sans-serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #08101E;
+  color: #E2E8F0;
+  font-family: var(--font-plus-jakarta), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom glow effects matching Oceanic Abyssal Tech */
+.text-glow {
+  text-shadow: 0 0 24px rgba(96, 193, 229, 0.45);
+}
+
+.box-glow {
+  box-shadow: 0 12px 36px -4px rgba(0, 90, 156, 0.35);
+}
+
+.border-glow:hover {
+  box-shadow: 0 0 24px rgba(96, 193, 229, 0.3);
+  border-color: #60C1E5;
+}
+
+/* Glassmorphism containers */
+.glass-panel {
+  background: rgba(17, 34, 61, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(31, 63, 109, 0.7);
+}
+
+.glass-panel-elevated {
+  background: rgba(19, 36, 61, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(96, 193, 229, 0.25);
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08101E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B365D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60C1E5;
+}
+
